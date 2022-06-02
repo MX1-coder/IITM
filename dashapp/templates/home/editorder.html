@@ -1,0 +1,63 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Edit order {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-profile">
+                <div class="card-body">
+                    <h6 class="card-category text-black">Edit Order here</h6>
+                    <form action="/update2/{{ context.id }}" method="POST">
+                        {% csrf_token %}                  
+                        <div class="row">
+                          <div class="col-md-7">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">id</label>
+                              <input type="text" name="id" class="form-control" value="{{ context.id }}">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-7">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">Product Name</label>
+                              <input type="text" name="product_name" class="form-control" value="{{ context.product_name }}">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-7">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">Product Price</label>
+                              <input type="text" name="price" class="form-control" value="{{context.price}}">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-7">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">Product Quantitye</label>
+                              <input type="text" name="product_quantity" class="form-control" value="{{context.product_quantity}}">
+                            </div>
+                          </div>
+                        </div>
+                        
+                                        
+                            <button type="submit" class="btn btn-primary pull-right">add</button>
+                        
+                      </form>
+                    {% comment %} <a href="/" class="btn btn-primary btn-round">Home</a> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

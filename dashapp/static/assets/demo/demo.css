@@ -59,3 +59,16 @@
   height: calc(100vh - 70px);
   margin-top: 70px;
 }
+/* .cd{
+ 
+    display: flex;
+    justify-content: center;
+    
+
+}
+.cd .col-sm-3{
+  max-width: 100%;
+}
+.cd .col-sm-3 input{
+  width: 100%;
+} */

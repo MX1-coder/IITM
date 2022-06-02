@@ -7,7 +7,8 @@
 
 {% block content %}
 
-    <div class="row">
+
+    {% comment %} <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
           <div class="card-header card-header-warning card-header-icon">
@@ -58,372 +59,316 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="card card-stats">
-          <div class="card-header card-header-info card-header-icon">
-            <div class="card-icon">
-              <i class="fa fa-twitter"></i>
-            </div>
-            <p class="card-category">Followers</p>
-            <h3 class="card-title">+245</h3>
-          </div>
-          <div class="card-footer">
-            <div class="stats">
-              <i class="material-icons">update</i> Just Updated
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card card-chart">
-          <div class="card-header card-header-success">
-            <div class="ct-chart" id="dailySalesChart"></div>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Daily Sales</h4>
-            <p class="card-category">
-              <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
-          </div>
-          <div class="card-footer">
-            <div class="stats">
-              <i class="material-icons">access_time</i> updated 4 minutes ago
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card card-chart">
-          <div class="card-header card-header-warning">
-            <div class="ct-chart" id="websiteViewsChart"></div>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Monthly sells</h4>
-            <p class="card-category">Last Campaign Performance</p>
-          </div>
-          <div class="card-footer">
-            <div class="stats">
-              <i class="material-icons">access_time</i> campaign sent 2 days ago
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card card-chart">
-          <div class="card-header card-header-danger">
-            <div class="ct-chart" id="completedTasksChart"></div>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">yearly selss</h4>
-            <p class="card-category">Last Campaign Performance</p>
-          </div>
-          <div class="card-footer">
-            <div class="stats">
-              <i class="material-icons">access_time</i> campaign sent 2 days ago
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 col-md-12">
-        <div class="card">
-          <div class="card-header card-header-tabs card-header-primary">
-            <div class="nav-tabs-navigation">
-              <div class="nav-tabs-wrapper">
-                <span class="nav-tabs-title">Tasks:</span>
-                <ul class="nav nav-tabs" data-tabs="tabs">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#profile" data-toggle="tab">
-                      <i class="material-icons">bug_report</i> Bugs
-                      <div class="ripple-container"></div>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#messages" data-toggle="tab">
-                      <i class="material-icons">code</i> Website
-                      <div class="ripple-container"></div>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#settings" data-toggle="tab">
-                      <i class="material-icons">cloud</i> Server
-                      <div class="ripple-container"></div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="tab-content">
-              <div class="tab-pane active" id="profile">
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="" checked>
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </td>
-                      <td>Sign contract for "What are conference organizers afraid of?"</td>
-                      <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                          <i class="material-icons">edit</i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                          <i class="material-icons">close</i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </td>
-                      <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
-                      <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                          <i class="material-icons">edit</i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                          <i class="material-icons">close</i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </td>
-                      <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                      </td>
-                      <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                          <i class="material-icons">edit</i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                          <i class="material-icons">close</i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="" checked>
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </td>
-                      <td>Create 4 Invisible User Experiences you Never Knew About</td>
-                      <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                          <i class="material-icons">edit</i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                          <i class="material-icons">close</i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="tab-pane" id="messages">
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="" checked>
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </td>
-                      <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                      </td>
-                      <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                          <i class="material-icons">edit</i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                          <i class="material-icons">close</i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </td>
-                      <td>Sign contract for "What are conference organizers afraid of?"</td>
-                      <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                          <i class="material-icons">edit</i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                          <i class="material-icons">close</i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="tab-pane" id="settings">
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </td>
-                      <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
-                      <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                          <i class="material-icons">edit</i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                          <i class="material-icons">close</i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="" checked>
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </td>
-                      <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                      </td>
-                      <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                          <i class="material-icons">edit</i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                          <i class="material-icons">close</i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="" checked>
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </td>
-                      <td>Sign contract for "What are conference organizers afraid of?"</td>
-                      <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                          <i class="material-icons">edit</i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                          <i class="material-icons">close</i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12">
-        <div class="card">
-          <div class="card-header card-header-warning">
-            <h4 class="card-title">Employees Stats</h4>
-            <p class="card-category">New employees on 15th September, 2016</p>
-          </div>
-          <div class="card-body table-responsive">
-            <table class="table table-hover">
-              <thead class="text-warning">
-                <th>ID</th>
-                <th>Name</th>
-                <th>Salary</th>
-                <th>Country</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Dakota Rice</td>
-                  <td>$36,738</td>
-                  <td>Niger</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Minerva Hooper</td>
-                  <td>$23,789</td>
-                  <td>Curaçao</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Sage Rodriguez</td>
-                  <td>$56,142</td>
-                  <td>Netherlands</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Philip Chaney</td>
-                  <td>$38,735</td>
-                  <td>Korea, South</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
+      </div> {% endcomment %}
 
+
+      
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid">
+          <div class="header-body">
+              <div class="row align-items-center py-4">               
+                  {% comment %} <div class="col-lg-6 col-5 text-right">
+                      <a href="#" class="btn btn-sm btn-primary">New</a>
+                      <a href="#" class="btn btn-sm btn-primary">Filters</a>
+                  </div> {% endcomment %}
+              </div>
+
+              <!-- Widget 1 -->
+              <div class="row">
+                  <div class="col-xl-3 col-md-6">
+                      <div class="card card-stats">
+                          <!-- Card body -->
+                          <div class="card-body">
+                              <div class="row">
+                                  <div class="col">
+                                      <h5 class="card-title text-uppercase text-muted mb-0">Total Sales</h5>
+                                      <span class="h2 font-weight-bold mb-0">${{ items|default:0 }}</span>
+                                  </div>
+                                  <div class="col-auto">
+                                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                          <i class="ni ni-active-40"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                              <p class="mt-3 mb-0 text-sm">
+                  <span class="text-nowrap">
+                    Sales in the last 12mo
+                  </span>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Widget 2 -->
+                  <div class="col-xl-3 col-md-6">
+                      <div class="card card-stats">
+                          <!-- Card body -->
+                          <div class="card-body">
+                              <div class="row">
+                                  <div class="col">
+                                      <h5 class="card-title text-uppercase text-muted mb-0">Peek Sale</h5>
+                                      <span class="h2 font-weight-bold mb-0">${{ max|default:0 }}</span>
+                                  </div>
+                                  <div class="col-auto">
+                                      <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                          <i class="ni ni-chart-pie-35"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                              <p class="mt-3 mb-0 text-sm">
+                                  <span class="text-nowrap">
+                                      Highest transaction (last 12mo)
+                                  </span>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Widget 3 -->
+                  <div class="col-xl-3 col-md-6">
+                      <div class="card card-stats">
+                          <!-- Card body -->
+                          <div class="card-body">
+                              <div class="row">
+                                  <div class="col">
+                                      <h5 class="card-title text-uppercase text-muted mb-0">Total Orders</h5>
+                                      <span class="h2 font-weight-bold mb-0">{{ count|default:0 }}</span>
+                                  </div>
+                                  <div class="col-auto">
+                                      <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                                          <i class="ni ni-money-coins"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                              <p class="mt-3 mb-0 text-sm">
+                  <span class="text-nowrap">
+                    Orders in the last 12mo
+                  </span>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Widget 4 -->
+                  <div class="col-xl-3 col-md-6">
+                      <div class="card card-stats">
+                          <!-- Card body -->
+                          <div class="card-body">
+                              <div class="row">
+                                  <div class="col">
+                                      <h5 class="card-title text-uppercase text-muted mb-0">Total
+                                          Products:{{ best_month.month_name }}</h5>
+                                      <span class="h2 font-weight-bold mb-0">{{ countp|default:0 }}</span>
+                                  </div>
+                                  <div class="col-auto">
+                                      <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                                          <i class="ni ni-chart-bar-32"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                              <p class="mt-3 mb-0 text-sm">
+                  <span class="text-nowrap">
+                    total product
+                  </span>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="container-fluid mt--6">
+      <div class="row">
+          <div class="col-xl-10">
+              <div class="card bg-default">
+                  <div class="card-header bg-BLACK">
+                      <div class="row align-items-center">
+                          <div class="col">
+                              <h6 class="text-dark text-uppercase ls-1 mb-1">Overview</h6>
+                              <h5 class="h3 text-dark mb-0">Sells</h5>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Line Chart -->
+                  <div class="card-body">
+                      <!-- Chart -->
+                      <div class="chart">
+                          <!-- Chart wrapper -->
+                          <canvas id="myChart" width="100" height="30vh"></canvas>
+                          <canvas id="myChart" width="100" height="30vh"></canvas>
+                          {% comment %} <canvas id="myChart1" width="100" height="30vh"></canvas> {% endcomment %}
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          
+      </div>
+
+
+      <div class="row">
+          <div class="col-xl-12">
+              <div class="card" id="orderItems">
+                  <div class="card-header border-0">
+                      <div class="row align-items-center">
+                          <div class="col">
+                              <h3 class="mb-0">Orders</h3>
+                          </div>
+                          {#<form action="">{% csrf_token %}{% url 'createorder' %}</form>#}
+                          <div class="col text-right">
+                              <a href="{% url 'createorder' %}" class="btn btn-sm btn-primary get-order-form">Add Order</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="table-responsive">
+                      <!-- Projects table -->
+                      <div class="card-body">
+                          <div class="table-responsive">
+                            
+                            <table class="table">
+                
+                              <thead class=" text-primary">
+                                <th>
+                                  ID
+                                </th>
+                                <th>
+                                  Produc NAme
+                                </th>
+                                <th>
+                                  price
+                                </th>
+                                <th>
+                                 Quantity
+                                </th>
+                                <th>
+                                  Date time
+                                </th>
+                            
+                                <th>
+                                    Admin
+                                </th>
+                              </thead>
+                              {% for order in orders %}
+                              <tbody>
+                
+                                <tr>
+                                  <td>
+                                    {{ order.id }}
+                                  </td>
+                                  <td>
+                                    {{ order.product_name }}
+                                  </td>
+                                  <td>
+                                    {{ order.price }}
+                                  </td>
+                                  <td>
+                                    {{ order.product_quantity }}
+                                  </td>
+                                  <td>
+                                    {{ order.created_time }}
+                                  </td>
+                                 
+                                  <td>
+                                    <a href="/update2/{{order.id}}" class="btn btn-warning" id = '{{order.id}}'>edit</a>
+                                    <a href="/delete2/{{order.id}}" class="btn btn-danger" id = '{{order.id}}'>delete</a>
+                                  </td>
+                                </tr>
+                                
+                              </tbody>
+                              {%endfor%}
+                            </table>                   
+              </div>
+          </div>
+      </div>
+
+  </div>
+     
+    
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
-
+<script>
+  const ctx = document.getElementById('myChart');
+  const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: [{% for order in orders %},'{{order.product_name}}',{% endfor %}],
+          datasets: [{
+              label: '# sells $',
+              data: [{% for order in orders %},'{{ order.price }}',{% endfor %}],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+       
+        scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+  </script>
+<script>
+  const ctx = document.getElementById('myChart1').getContext('2d');
+  const myChart1 = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: [{% for product in products %},'{{product.product_name}}',{% endfor %}],
+          datasets: [{
+              label: '# Products',
+              data: [{% for product in products %},'{{product.product_quantity}}',{% endfor %}],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+</script>
+ 
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
@@ -431,5 +376,5 @@
 
     });
   </script>
-
+  
 {% endblock javascripts %}

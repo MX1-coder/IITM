@@ -1,0 +1,79 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} editproduct {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-profile">
+                <div class="card-body">
+                    <h6 class="card-category text-black">Editproduct here</h6>
+                    <form action="/update/{{ context.id }}" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                          <div class="col-md-7">
+                            <div class="">
+                              
+                              <label for="formFile" class="form-label">Image</label>
+                              <input class="form-control" type="file"  value="{{ context.product_image }}">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-7">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">id</label>
+                              <input type="text" name="id" class="form-control" value="{{ context.id }}">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-7">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">product name</label>
+                              <input type="text" name="product_name" class="form-control" value="{{ context.product_name }}">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-7">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">quantity</label>
+                              <input type="text" name="product_quantity" class="form-control" value="{{context.product_quantity}}">
+                            </div>
+                          </div>
+                          <div class="col-md-7">
+                            <div class="form-group">
+                              <label class="bmd-label-floating">price</label>
+                              <input type="text" name="product_price" class="form-control" value="{{context.product_price}}">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label>Product Description</label>
+                              <div class="form-group">
+                                <label class="bmd-label-floating">Write your product description here</label>
+                                <textarea class="form-control" name="product_discription" rows="5">{{context.product_discription}}</textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary pull-right">add</button>
+                        <div class="clearfix"></div>
+                      </form>
+                    {% comment %} <a href="/" class="btn btn-primary btn-round">Home</a> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

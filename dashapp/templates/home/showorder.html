@@ -1,0 +1,81 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} showproduct {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header card-header-primary">
+          <h4 class="card-title ">order Data</h4>
+          <p class="card-category"> Here is all order data</p>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            
+            <table class="table">
+                
+              <thead class=" text-primary">
+                <th>
+                  ID
+                </th>
+                <th>
+                  Produc NAme
+                </th>
+                <th>
+                  price
+                </th>
+                <th>
+                 Quantity
+                </th>
+                <th>
+                  Date time
+                </th>
+            
+                <th>
+                    Admin
+                </th>
+              </thead>
+              {% for order in context %}
+              <tbody>
+
+                <tr>
+                  <td>
+                    {{ order.id }}
+                  </td>
+                  <td>
+                    {{ order.product_name }}
+                  </td>
+                  <td>
+                    {{ order.price }}
+                  </td>
+                  <td>
+                    {{ order.product_quantity }}
+                  </td>
+                  <td>
+                    {{ order.created_time }}
+                  </td>
+                 
+                  <td>
+                    <a href="/update2/{{order.id}}" class="btn btn-warning" id = '{{order.id}}'>edit</a>
+                    <a href="/delete2/{{order.id}}" class="btn btn-danger" id = '{{order.id}}'>delete</a>
+                  </td>
+                </tr>
+                
+              </tbody>
+              {%endfor%}
+            </table>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

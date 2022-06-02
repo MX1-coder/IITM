@@ -1,0 +1,111 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} showproduct {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-profile">
+      <div class="card-body">
+        <h6 class="card-category text-black">showproduct here</h6>
+        <h4 class="card-title">
+          <div class="card-columns">
+            {% for product in context %}
+            <div class="card" style="width: 20rem;">
+              <img src="{{ product.product_image.url }}" class="card-img-top" style="width: 200px;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ product.product_name }}</h5>
+                <h5 class="card-title">Price: {{product.product_price}}</h5>
+                <p class="card-text">{{ product.product_discription }}</p>
+                <div class="card-footer bg-transparent border-dark">
+                  <div center class='center'>
+                    <a href="/update/{{product.id}}" class="btn btn-warning" id='{{product.id}}'>edit</a>
+                    <a href="/delete/{{product.id}}" class="btn btn-danger" id='{{product.id}}'>delete</a>
+                  </div >
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </h4>
+        <a href="/" class="btn btn-primary btn-round">Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title ">product Table</h4>
+        <p class="card-category"> Here is a subtitle for this table</p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+
+          <table class="table">
+
+            <thead class=" text-primary">
+              <th>
+                ID
+              </th>
+              <th>
+                Product Image
+              </th>
+              <th>
+                Product Name
+              </th>
+              <th>
+                Product Price
+              </th>
+              <th>
+                Product quantity
+              </th>
+              <th>
+                Product Description
+              </th>
+              <th>
+                admin
+              </th>
+            </thead>
+            {% for product in context %}
+            <tbody>
+              <tr>
+                <td>
+                  {{ product.id }}
+                </td>
+                <td>
+                  <img class="" src="{{ product.product_image.url }}" width="40" height="40">
+                </td>
+                <td class="text-secondary">
+                  {{product.product_name }}
+                </td>
+                <td>
+                  {{product.product_price }}
+                </td>
+                <td>
+                  {{product.product_quantity }}
+                </td>
+                <td>
+                  {{product.product_discription }}
+                </td>
+                <td>
+                  <a href="/update/{{product.id}}" class="btn btn-warning" id='{{product.id}}'>edit</a>
+                  <a href="/delete/{{product.id}}" class="btn btn-danger" id='{{product.id}}'>delete</a>
+                </td </tr>
+
+            </tbody>
+            {%endfor%}
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+
+  <!-- Specific Page JS goes HERE  -->
+  {% block javascripts %}{% endblock javascripts %}
