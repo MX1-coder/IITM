@@ -28,12 +28,14 @@ from django.db.models import Sum ,Count,Max
 def index(request):
     items = Order.objects.all()
     total_price = sum(items.values_list('price', flat=True))
+    maxp = Order.objects.all()
+    max_price = max(maxp.values_list('price',flat=True))
     # items =Order.objects.aggregate(Sum('price'))
     products=Product.objects.all()
     orders=Order.objects.all()
     count= Order.objects.all().count()
     countp=Product.objects.all().count()
-    context={'products':products,'orders':orders,'count':count,'sum':sum,'items':total_price,'countp':countp}
+    context={'products':products,'orders':orders,'count':count,'sum':sum,'items':total_price,'countp':countp,'max_price':max_price}
     return render(request,'home/index.html',context)
 
 @login_required(login_url="/login/")

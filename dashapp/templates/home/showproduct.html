@@ -10,7 +10,7 @@
   <div class="col-md-12">
     <div class="card card-profile">
       <div class="card-body">
-        <h6 class="card-category text-black">showproduct here</h6>
+        <h6 class="card-category text-black">Showproduct here</h6>
         <h4 class="card-title">
           <div class="card-columns">
             {% for product in context %}
@@ -19,6 +19,7 @@
               <div class="card-body">
                 <h5 class="card-title">{{ product.product_name }}</h5>
                 <h5 class="card-title">Price: {{product.product_price}}</h5>
+                <h5 class="card-title">Quantity: {{product.product_quantity}}</h5>
                 <p class="card-text">{{ product.product_discription }}</p>
                 <div class="card-footer bg-transparent border-dark">
                   <div center class='center'>
