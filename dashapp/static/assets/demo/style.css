@@ -1,0 +1,11 @@
+.cd{
+    display: flex;
+    justify-content: center;
+}
+.cd .col-sm-12 input{
+  width: 100%;
+}
+
+.cd .col-sm-12 label {
+    display: block;
+}

@@ -1,0 +1,119 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} showproduct {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header card-header-primary">
+          <h4 class="card-title ">Employee Data</h4>
+          <p class="card-category"> Here is all employee data</p>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            
+            <table class="table">
+                
+              <thead class=" text-primary">
+                <th>
+                  ID
+                </th>
+                <th>
+                  FirstName
+                </th>
+                <th>
+                  Lastname
+                </th>
+                <th>
+                  Sallary
+                </th>
+                <th>
+                  Mobile Number
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    Admin
+                </th>
+              </thead>
+              {% for employee in context %}
+              <tbody>
+
+                <tr>
+                  <td>
+                    {{ employee.id }}
+                  </td>
+                  <td>
+                    {{ employee.firstname }}
+                  </td>
+                  <td>
+                    {{ employee.lastname }}
+                  </td>
+                  <td>
+                    {{ employee.sallary }}
+                  </td>
+                  <td>
+                    {{ employee.mobnumber }}
+                  </td>
+                  <td class="text-primary">
+                    {{ employee.address }}
+                  </td>
+                  <td>
+                    <a href="/update1/{{employee.id}}" class="btn btn-warning" id = '{{employee.id}}'>edit</a>
+                    <a href="/delete1/{{employee.id}}" class="btn btn-danger" id = '{{employee.id}}'>delete</a>
+                  </td>
+                </tr>
+                
+              </tbody>
+              {%endfor%}
+            </table>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+{% comment %} 
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-profile">
+                <div class="card-body">
+                    <h6 class="card-category text-black">showproduct here</h6>
+                    <h4 class="card-title">
+                        <div class="card-columns">
+                            {% for product in context %}
+                            <div class="card" style="width: 18rem;">    
+                                <div  class="img w-100px">
+                                    <img class="card-img-top" src="{{ product.product_image.url }}">
+                                </div>
+                                
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ product.product_name }}</h5>
+                                    <p class="card-title">Price: {{product.product_price}}</p>
+                                    <p class="card-title">Quantity:{{product.product_quantity}}</p>
+                                    <p class="card-text">{{ product.product_discription }}</p>
+                                <div class="card-footer bg-transparent border-dark">
+                                    <center>
+                                    <a href="/update/{{product.id}}" class="btn btn-warning" id = '{{product.id}}'>edit</a>
+                                    <a href="/delete/{{product.id}}" class="btn btn-danger" id = '{{product.id}}'>delete</a>
+                                    </center>
+                                </div>
+                          </div>
+                        </div>
+                            {% endfor %}
+                        </div>
+                    </h4>
+                    <a href="/" class="btn btn-primary btn-round">Home</a>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+    
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
