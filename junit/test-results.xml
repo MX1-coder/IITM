@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="2" failures="0" skipped="0" tests="2" time="0.967" timestamp="2022-07-13T18:43:52.156250" hostname="DESKTOP-4T7RSHR"><testcase classname="" name="tests" time="0.000"><error message="collection failure">tests.py:2: in &lt;module&gt;
+    from dashapp.models import Product
+dashapp\models.py:10: in &lt;module&gt;
+    class Product(models.Model):
+..\..\AppData\Roaming\Python\Python310\site-packages\django\db\models\base.py:127: in __new__
+    app_config = apps.get_containing_app_config(module)
+..\..\AppData\Roaming\Python\Python310\site-packages\django\apps\registry.py:260: in get_containing_app_config
+    self.check_apps_ready()
+..\..\AppData\Roaming\Python\Python310\site-packages\django\apps\registry.py:137: in check_apps_ready
+    settings.INSTALLED_APPS
+..\..\AppData\Roaming\Python\Python310\site-packages\django\conf\__init__.py:87: in __getattr__
+    self._setup(name)
+..\..\AppData\Roaming\Python\Python310\site-packages\django\conf\__init__.py:67: in _setup
+    raise ImproperlyConfigured(
+E   django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error><error message="collection failure">tests.py:2: in &lt;module&gt;
+    from dashapp.models import Product
+dashapp\models.py:10: in &lt;module&gt;
+    class Product(models.Model):
+..\..\AppData\Roaming\Python\Python310\site-packages\django\db\models\base.py:127: in __new__
+    app_config = apps.get_containing_app_config(module)
+..\..\AppData\Roaming\Python\Python310\site-packages\django\apps\registry.py:260: in get_containing_app_config
+    self.check_apps_ready()
+..\..\AppData\Roaming\Python\Python310\site-packages\django\apps\registry.py:137: in check_apps_ready
+    settings.INSTALLED_APPS
+..\..\AppData\Roaming\Python\Python310\site-packages\django\conf\__init__.py:87: in __getattr__
+    self._setup(name)
+..\..\AppData\Roaming\Python\Python310\site-packages\django\conf\__init__.py:67: in _setup
+    raise ImproperlyConfigured(
+E   django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</error></testcase></testsuite></testsuites>
